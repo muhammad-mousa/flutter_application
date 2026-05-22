@@ -50,11 +50,16 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Container(
-        padding: const EdgeInsets.all(50.0),
         child: Stack(
           children: [
-            Image.asset('assets/images/bg.jpg', fit: BoxFit.cover, height: 300),
             SizedBox(height: 300, child: Center(child: Text('Flutter'))),
+            ListTile(
+              leading: Icon(Icons.join_full),
+              tileColor: Colors.red,
+              title: Text('Counter: $_counter'),
+              trailing: Text('This is a trailing widget'),
+              onTap: () => {},
+            ),
           ],
         ),
       ),
