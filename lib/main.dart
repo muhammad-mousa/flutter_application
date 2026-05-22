@@ -18,8 +18,21 @@ class MyApp extends StatelessWidget {
         ),
       ),
       home: Scaffold(
-        appBar: AppBar(title: const Text('Flutter App')),
-        body: const Center(child: Text('Hello, World!')),
+        appBar: AppBar(
+          title: const Text('Flutter Mapp'),
+          centerTitle: true,
+          backgroundColor: Colors.teal,
+        ),
+        bottomNavigationBar: NavigationBar(
+          destinations: const [
+            NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
+            NavigationDestination(icon: Icon(Icons.person), label: 'Profile'),
+          ],
+          onDestinationSelected: (int index) {
+            print('Selected index: $index');
+          },
+          selectedIndex: 0,
+        ),
       ),
     );
   }
