@@ -49,19 +49,19 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: Container(
-        child: Stack(
-          children: [
-            SizedBox(height: 300, child: Center(child: Text('Flutter'))),
-            ListTile(
-              leading: Icon(Icons.join_full),
-              tileColor: Colors.red,
-              title: Text('Counter: $_counter'),
-              trailing: Text('This is a trailing widget'),
-              onTap: () => {},
-            ),
-          ],
-        ),
+      body: Wrap(
+        children: [
+          Text(
+            'This is the Text..This is the Text..This is the Text..This is the Text..This is the Text..This is the Text..This is the Text..This is the Text..',
+          ),
+          Text(
+            'This is the Text..This is the Text..This is the Text..This is the Text..This is the Text..This is the Text..',
+          ),
+          Text('This is the Text..'),
+          Text('This is the Text..'),
+          Text('This is the Text..'),
+          Text('This is the Text..'),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
