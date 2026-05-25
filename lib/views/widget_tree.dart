@@ -13,7 +13,23 @@ class WidgetTree extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Flutter Mapp'), centerTitle: true),
+      appBar: AppBar(
+        title: Text('Flutter Mapp'),
+        centerTitle: true,
+        actions: [
+          IconButton(
+            onPressed: () {
+              isDarkModeNotifier.value = !isDarkModeNotifier.value;
+            },
+            icon: ValueListenableBuilder(
+              valueListenable: isDarkModeNotifier,
+              builder: (context, isDark, child) {
+                return isDark ? Icon(Icons.light_mode) : Icon(Icons.dark_mode);
+              },
+            ),
+          ),
+        ],
+      ),
       body: ValueListenableBuilder(
         valueListenable: selectedPageNotifier,
         builder: (context, selectedPage, child) {
