@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application/views/widget_tree.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,17 +18,7 @@ class MyApp extends StatelessWidget {
           brightness: Brightness.dark,
         ),
       ),
-      home: Scaffold(
-        appBar: AppBar(title: const Text('Flutter Mapp'), centerTitle: true),
-        bottomNavigationBar: NavigationBar(
-          destinations: const [
-            NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
-            NavigationDestination(icon: Icon(Icons.person), label: 'Profile'),
-          ],
-          onDestinationSelected: (int index) {},
-          selectedIndex: 0,
-        ),
-      ),
+      home: WidgetTree(),
     );
   }
 }
