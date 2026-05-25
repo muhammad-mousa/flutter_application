@@ -17,40 +17,15 @@ class MyApp extends StatelessWidget {
           brightness: Brightness.dark,
         ),
       ),
-      home: SafeArea(
-        child: Scaffold(
-          appBar: AppBar(title: const Text('Flutter Mapp'), centerTitle: true),
-          drawer: Drawer(
-            child: Column(children: [ListTile(title: const Text('Logout'))]),
-          ),
-          floatingActionButton: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              FloatingActionButton(
-                onPressed: () {
-                  print('Floating Action Button Pressed');
-                },
-                child: const Icon(Icons.add),
-              ),
-              SizedBox(height: 10), // Add some spacing between the buttons
-              FloatingActionButton(
-                onPressed: () {
-                  print('Second Floating Action Button Pressed');
-                },
-                child: const Icon(Icons.edit),
-              ),
-            ],
-          ),
-          bottomNavigationBar: NavigationBar(
-            destinations: const [
-              NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
-              NavigationDestination(icon: Icon(Icons.person), label: 'Profile'),
-            ],
-            onDestinationSelected: (int index) {
-              print('Selected index: $index');
-            },
-            selectedIndex: 0,
-          ),
+      home: Scaffold(
+        appBar: AppBar(title: const Text('Flutter Mapp'), centerTitle: true),
+        bottomNavigationBar: NavigationBar(
+          destinations: const [
+            NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
+            NavigationDestination(icon: Icon(Icons.person), label: 'Profile'),
+          ],
+          onDestinationSelected: (int index) {},
+          selectedIndex: 0,
         ),
       ),
     );
