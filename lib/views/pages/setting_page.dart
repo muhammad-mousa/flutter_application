@@ -35,6 +35,17 @@ class _SettingPageState extends State<SettingPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              ElevatedButton(
+                onPressed: () {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      content: Text('Snackbar opened!'),
+                      behavior: SnackBarBehavior.floating,
+                    ),
+                  );
+                },
+                child: Text('Open Snackbar'),
+              ),
               DropdownButton(
                 value: menuItem,
                 items: [
@@ -117,16 +128,6 @@ class _SettingPageState extends State<SettingPage> {
                   height: 50,
                   color: Colors.white12,
                 ),
-              ),
-              ElevatedButton(
-                onPressed: () {
-                  print('Button Pressed');
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.teal,
-                  foregroundColor: Colors.white,
-                ),
-                child: Text('Submit'),
               ),
               ElevatedButton.icon(
                 onPressed: () {
