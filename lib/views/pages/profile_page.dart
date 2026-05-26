@@ -13,13 +13,28 @@ class _ProfilePageState extends State<ProfilePage> {
   bool? isChecked = false;
   bool isSwitched = false;
   double sliderValue = 0.0;
+  String? menuItem = 'data 1';
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            DropdownButton(
+              value: menuItem,
+              items: [
+                DropdownMenuItem(value: 'data 1', child: Text('data 1')),
+                DropdownMenuItem(value: 'data 2', child: Text('data 2')),
+                DropdownMenuItem(value: 'data 3', child: Text('data 3')),
+              ],
+              onChanged: (String? value) {
+                setState(() {
+                  menuItem = value;
+                });
+              },
+            ),
             TextField(
               controller: controller,
               decoration: InputDecoration(
