@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ProfilePage extends StatefulWidget {
@@ -85,9 +86,61 @@ class _ProfilePageState extends State<ProfilePage> {
               },
               child: Container(
                 width: double.infinity,
-                height: 200,
+                height: 50,
                 color: Colors.white12,
               ),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                print('Button Pressed');
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.teal,
+                foregroundColor: Colors.white,
+              ),
+              child: Text('Submit'),
+            ),
+            ElevatedButton.icon(
+              onPressed: () {
+                print('Icon Button Pressed');
+              },
+              icon: Icon(Icons.send),
+              label: Text('Send'),
+            ),
+            FilledButton(
+              onPressed: () {
+                print('Filled Button Pressed');
+              },
+              child: Text('Filled Button'),
+            ),
+            TextButton(
+              onPressed: () {
+                print('Text Button Pressed');
+              },
+              child: Text('Text Button'),
+            ),
+            OutlinedButton(
+              onPressed: () {
+                print('Outlined Button Pressed');
+              },
+              child: Text('Outlined Button'),
+            ),
+            CloseButton(
+              onPressed: () {
+                print('Close Button Pressed');
+              },
+            ),
+            BackButton(
+              onPressed: () {
+                print('Back Button Pressed');
+              },
+            ),
+            CupertinoButton(
+              onPressed: () {
+                print('Cupertino Button Pressed');
+              },
+              color: Colors.teal,
+              child: Text('Cupertino Button'),
             ),
           ],
         ),
