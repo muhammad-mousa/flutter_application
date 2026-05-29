@@ -90,13 +90,14 @@ class _LoginPageState extends State<LoginPage> {
   void onLoginPressed() {
     if (controllerEmail.text == confirmedEmail &&
         controllerPassword.text == confirmedPassword) {
-      Navigator.pushReplacement(
+      Navigator.pushAndRemoveUntil(
         context,
         MaterialPageRoute(
           builder: (context) {
             return WidgetTree();
           },
         ),
+        (route) => false,
       );
     } else {
       ScaffoldMessenger.of(
