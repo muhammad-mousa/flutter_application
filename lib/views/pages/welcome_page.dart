@@ -27,7 +27,7 @@ class WelcomePage extends StatelessWidget {
             SizedBox(height: 20),
             FilledButton(
               onPressed: () {
-                Navigator.pushReplacement(
+                Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) {
@@ -44,7 +44,7 @@ class WelcomePage extends StatelessWidget {
             SizedBox(height: 10),
             TextButton(
               onPressed: () {
-                Navigator.pushReplacement(
+                Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) {
