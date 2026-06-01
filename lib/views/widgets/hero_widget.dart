@@ -29,7 +29,7 @@ class HeroWidget extends StatelessWidget {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(20.0),
               child: Image.asset(
-                'assets/images/logo.png',
+                'assets/images/bg.jpg',
                 color: Colors.teal,
                 colorBlendMode: BlendMode.darken,
               ),
