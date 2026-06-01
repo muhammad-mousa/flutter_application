@@ -23,13 +23,13 @@ class OnboardingPage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Lottie.asset('assets/lotties/welcome.json', height: 400.0),
-                SizedBox(height: 20.0),
+                Lottie.asset('assets/lotties/Welcome.json', height: 400.0),
                 Text(
                   'Flutter Mapp is the way to learn flutter, period. It is the best way to learn flutter.',
                   style: KTextStyle.descriptionText,
                   textAlign: TextAlign.justify,
                 ),
+                SizedBox(height: 20.0),
                 FilledButton(
                   onPressed: () {
                     Navigator.push(
