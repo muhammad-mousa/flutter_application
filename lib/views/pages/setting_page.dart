@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application/views/pages/expanded_flexible_page.dart';
 
 class SettingPage extends StatefulWidget {
   const SettingPage({super.key, required this.title});
@@ -161,9 +162,16 @@ class _SettingPageState extends State<SettingPage> {
               ),
               FilledButton(
                 onPressed: () {
-                  print('Filled Button Pressed');
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return ExpandedFlexiblePage();
+                      },
+                    ),
+                  );
                 },
-                child: Text('Filled Button'),
+                child: Text('Show Expanded and Flexible'),
               ),
               TextButton(
                 onPressed: () {
